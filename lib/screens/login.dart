@@ -11,7 +11,7 @@ class Login extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.all(64.0),
-          child: Text("Hola Flutter"),
+          child: Text("Ingresa turs credenciales"),
         ),
       ),
     );
