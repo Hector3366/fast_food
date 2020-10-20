@@ -9,10 +9,12 @@ class Login extends StatelessWidget {
           backgroundColor: Colors.redAccent,
           title: Text("Login"),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(64.0),
-          child: Text("Ingresa turs credenciales"),
-        ),
+        
+        body: 
+        Image(
+            image: AssetImage('autentificacion.svg'),
+          ),
+        
       ),
     );
   }
