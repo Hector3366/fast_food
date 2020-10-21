@@ -1,3 +1,4 @@
+import 'package:fast_food/screens/welcome.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -17,8 +18,17 @@ class Login extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Colors.redAccent,
               title: Text("Login"),
-              leading: Icon(
-                Icons.arrow_back,
+              leading: Builder(
+                builder: (BuildContext context) {
+                  return IconButton(
+                      icon: const Icon(Icons.arrow_back),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Welcome()),
+                        );
+                      });
+                },
               ),
             ),
             body: Column(
@@ -45,7 +55,7 @@ class Login extends StatelessWidget {
                     padding:
                         const EdgeInsets.only(top: 30, right: 20, left: 20),
                     child: TextField(
-                      obscureText: true,
+                      //obscureText: true,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                             borderRadius:
@@ -58,7 +68,8 @@ class Login extends StatelessWidget {
                 ),
                 Center(
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 5, right: 20, left: 20),
+                    padding:
+                        const EdgeInsets.only(top: 25, right: 20, left: 20),
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
@@ -74,7 +85,7 @@ class Login extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 40),
                     child: FlatButton(
-                      minWidth: 360.0,
+                      minWidth: 365.0,
                       height: 60.0,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
