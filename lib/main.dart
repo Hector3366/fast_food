@@ -1,5 +1,5 @@
 import 'package:fast_food/Screens/welcome.dart';
-
+//import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:fast_food/screens/splash.dart';
 
@@ -11,6 +11,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Fast food App",
       //home: Welcome(),
       home: Scaffold(

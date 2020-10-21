@@ -1,3 +1,4 @@
+import 'package:fast_food/screens/login.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatelessWidget {
@@ -59,7 +60,12 @@ class Welcome extends StatelessWidget {
               height: 60.0,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Login()),
+                );
+              },
               color: Colors.red,
               child: Text(
                 'INICIAR AHORA',
