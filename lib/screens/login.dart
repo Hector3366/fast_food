@@ -1,3 +1,4 @@
+import 'package:fast_food/screens/Registro.dart';
 import 'package:fast_food/screens/welcome.dart';
 import 'package:flutter/material.dart';
 
@@ -85,12 +86,53 @@ class _LoginState extends State<Login> {
             ),
             Center(
               child: Padding(
-                padding: const EdgeInsets.only(top: 40, right: 30, left: 30),
+                padding: const EdgeInsets.only(top: 10, right: 30, left: 30),
                 child: TextButton(
                   onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Registro()),
+                    );
+                  },
+                  child: Text(
+                    '¿Aún no tienes una cuenta? Consigue una',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'popins',
+                      color: Colors.red,
+                      fontSize: 15,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: FlatButton(
+                  minWidth: 365.0,
+                  height: 60.0,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (_) => new AlertDialog(
+                              title: new Text("BIENVENIDO"),
+                              content: new Text("$nombre"),
+                              actions: <Widget>[
+                                FlatButton(
+                                  child: Text('Cerrar'),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                )
+                              ],
+                            ));
                     nombre = nombreController.text;
                     print("El nombre es: $nombre");
                   },
+                  color: Colors.red,
                   child: Text(
                     'CONTINUAR',
                     textAlign: TextAlign.center,
@@ -100,9 +142,6 @@ class _LoginState extends State<Login> {
                       fontSize: 20,
                     ),
                   ),
-                  style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.redAccent)),
                 ),
               ),
             ),
