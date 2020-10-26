@@ -85,30 +85,41 @@ class _LoginState extends State<Login> {
               ),
             ),
             Center(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 10, right: 30, left: 30),
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Registro()),
-                    );
-                  },
-                  child: Text(
-                    '¿Aún no tienes una cuenta? Consigue una',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontFamily: 'popins',
-                      color: Colors.red,
-                      fontSize: 15,
+              child: Row(
+                children: [
+                  Center(
+                      child: Padding(
+                          padding: const EdgeInsets.only(top: 3, left: 70),
+                          child: Text(
+                            '¿Aún no tienes una cuenta?',
+                          ))),
+                  Center(
+                      child: Padding(
+                    padding: const EdgeInsets.only(top: 3),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Registro()),
+                        );
+                      },
+                      child: Text(
+                        'Consigue una',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'popins',
+                          color: Colors.red,
+                          fontSize: 15,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
+                  )),
+                ],
               ),
             ),
             Center(
               child: Padding(
-                padding: const EdgeInsets.only(top: 30),
+                padding: const EdgeInsets.only(top: 20),
                 child: FlatButton(
                   minWidth: 365.0,
                   height: 60.0,

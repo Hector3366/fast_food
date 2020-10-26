@@ -75,6 +75,7 @@ class Registro extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 10, right: 20, left: 20),
                   child: TextFormField(
+                    obscureText: true,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
                             borderRadius:
@@ -89,6 +90,7 @@ class Registro extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 10, right: 20, left: 20),
                   child: TextFormField(
+                    obscureText: true,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
                             borderRadius:
